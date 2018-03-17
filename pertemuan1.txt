@@ -1,0 +1,32 @@
+composer global require "laravel/installer"
+
+laravel new inventori-2 
+(membuat projek laravel dengan nama inventori-2)(versi lokal)
+
+composer create-project --prefer-dist laravel/laravel inventori-3 
+(bikin projek baru inventori-3)(download versi terbaru)
+
+jalankan apache dan mysql di xampp7.2
+masuk ke foder projek yang mau dibuka (dicmd)
+contoh:
+C:xampp7.2\htdocs\inventori-3>php artisan serve
+
+nanti di cmd bakal dikasi ip yang bakal dibuka buat liat projek
+bukanya localhost:(ip yg d cmd)
+
+php artisan config:cache (untuk memperbaharui)
+
+php artisan make:controller BarangController (membuat controller dengan artisan)
+php artisan make:model Barang (membuat model dengan artisan)
+php artisan make:model Model/Barang (membuat model dengan artisan di dalam folder model)
+
+======================================
+.env (buat ngatur database)
+app/http/controller (folder buat bikin controller)
+routes/web.php (buat ngatur view pertama)
+resources/views/	(untuk file view)
+app/ (untuk menyimpan file model)
+
+contoh routes
+Route::get('/', 'HomeController@getHome');
+*memanggil HomeController dengan function getHome
